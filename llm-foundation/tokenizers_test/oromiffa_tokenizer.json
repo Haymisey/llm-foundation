@@ -1,0 +1,300 @@
+{
+  "version": "1.0",
+  "truncation": null,
+  "padding": null,
+  "added_tokens": [
+    {
+      "id": 0,
+      "content": "<PAD>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 1,
+      "content": "<START>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 2,
+      "content": "<END>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 3,
+      "content": "<UNK>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 4,
+      "content": "<SEP>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    }
+  ],
+  "normalizer": null,
+  "pre_tokenizer": {
+    "type": "ByteLevel",
+    "add_prefix_space": false,
+    "trim_offsets": true,
+    "use_regex": true
+  },
+  "post_processor": {
+    "type": "TemplateProcessing",
+    "single": [
+      {
+        "SpecialToken": {
+          "id": "<START>",
+          "type_id": 0
+        }
+      },
+      {
+        "Sequence": {
+          "id": "A",
+          "type_id": 0
+        }
+      },
+      {
+        "SpecialToken": {
+          "id": "<END>",
+          "type_id": 0
+        }
+      }
+    ],
+    "pair": [
+      {
+        "SpecialToken": {
+          "id": "<START>",
+          "type_id": 0
+        }
+      },
+      {
+        "Sequence": {
+          "id": "A",
+          "type_id": 0
+        }
+      },
+      {
+        "SpecialToken": {
+          "id": "<SEP>",
+          "type_id": 0
+        }
+      },
+      {
+        "Sequence": {
+          "id": "B",
+          "type_id": 0
+        }
+      },
+      {
+        "SpecialToken": {
+          "id": "<END>",
+          "type_id": 0
+        }
+      }
+    ],
+    "special_tokens": {
+      "<END>": {
+        "id": "<END>",
+        "ids": [
+          2
+        ],
+        "tokens": [
+          "<END>"
+        ]
+      },
+      "<SEP>": {
+        "id": "<SEP>",
+        "ids": [
+          4
+        ],
+        "tokens": [
+          "<SEP>"
+        ]
+      },
+      "<START>": {
+        "id": "<START>",
+        "ids": [
+          1
+        ],
+        "tokens": [
+          "<START>"
+        ]
+      }
+    }
+  },
+  "decoder": {
+    "type": "ByteLevel",
+    "add_prefix_space": true,
+    "trim_offsets": true,
+    "use_regex": true
+  },
+  "model": {
+    "type": "BPE",
+    "dropout": null,
+    "unk_token": null,
+    "continuing_subword_prefix": null,
+    "end_of_word_suffix": null,
+    "fuse_unk": false,
+    "byte_fallback": false,
+    "ignore_merges": false,
+    "vocab": {
+      "<PAD>": 0,
+      "<START>": 1,
+      "<END>": 2,
+      "<UNK>": 3,
+      "<SEP>": 4,
+      "!": 5,
+      "'": 6,
+      ".": 7,
+      "?": 8,
+      "A": 9,
+      "D": 10,
+      "E": 11,
+      "a": 12,
+      "b": 13,
+      "e": 14,
+      "i": 15,
+      "j": 16,
+      "k": 17,
+      "m": 18,
+      "n": 19,
+      "u": 20,
+      "y": 21,
+      "aa": 22,
+      "ee": 23,
+      "Aj": 24,
+      "Ak": 25,
+      "Daa": 26,
+      "Dee": 27,
+      "Ee": 28,
+      "am": 29,
+      "ba": 30,
+      "iy": 31,
+      "iba": 32,
+      "kam": 33,
+      "kiy": 34,
+      "mi": 35,
+      "ny": 36,
+      "yee": 37,
+      "Ajaa": 38,
+      "Akkam": 39,
+      "Daakiy": 40,
+      "Deemi": 41,
+      "Eeny": 42,
+      "Daakiyyee": 43,
+      "Eenyu": 44
+    },
+    "merges": [
+      [
+        "a",
+        "a"
+      ],
+      [
+        "e",
+        "e"
+      ],
+      [
+        "A",
+        "j"
+      ],
+      [
+        "A",
+        "k"
+      ],
+      [
+        "D",
+        "aa"
+      ],
+      [
+        "D",
+        "ee"
+      ],
+      [
+        "E",
+        "e"
+      ],
+      [
+        "a",
+        "m"
+      ],
+      [
+        "b",
+        "a"
+      ],
+      [
+        "i",
+        "y"
+      ],
+      [
+        "i",
+        "ba"
+      ],
+      [
+        "k",
+        "am"
+      ],
+      [
+        "k",
+        "iy"
+      ],
+      [
+        "m",
+        "i"
+      ],
+      [
+        "n",
+        "y"
+      ],
+      [
+        "y",
+        "ee"
+      ],
+      [
+        "Aj",
+        "aa"
+      ],
+      [
+        "Ak",
+        "kam"
+      ],
+      [
+        "Daa",
+        "kiy"
+      ],
+      [
+        "Dee",
+        "mi"
+      ],
+      [
+        "Ee",
+        "ny"
+      ],
+      [
+        "Daakiy",
+        "yee"
+      ],
+      [
+        "Eeny",
+        "u"
+      ]
+    ]
+  }
+}

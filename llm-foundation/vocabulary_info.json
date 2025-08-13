@@ -1,0 +1,24 @@
+{
+  "vocabulary_stats": {
+    "amharic_vocab_size": 8000,
+    "oromiffa_vocab_size": 8000,
+    "model_vocab_size": 8000,
+    "special_tokens": {
+      "PAD": 0,
+      "START": 1,
+      "END": 2,
+      "UNK": 3,
+      "SEP": 4
+    },
+    "special_token_count": 5
+  },
+  "special_tokens": {
+    "PAD": 0,
+    "START": 1,
+    "END": 2,
+    "UNK": 3,
+    "SEP": 4
+  },
+  "amharic_tokenizer_file": "amharic_tokenizer.json",
+  "oromiffa_tokenizer_file": "oromiffa_tokenizer.json"
+}

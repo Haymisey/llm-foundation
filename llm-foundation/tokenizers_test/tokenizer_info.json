@@ -1,0 +1,19 @@
+{
+  "vocab_size": 100,
+  "min_frequency": 1,
+  "special_tokens": [
+    "<PAD>",
+    "<START>",
+    "<END>",
+    "<UNK>",
+    "<SEP>"
+  ],
+  "amharic_tokenizer": {
+    "vocab_size": 58,
+    "file": "amharic_tokenizer.json"
+  },
+  "oromiffa_tokenizer": {
+    "vocab_size": 45,
+    "file": "oromiffa_tokenizer.json"
+  }
+}

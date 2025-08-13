@@ -1,0 +1,349 @@
+{
+  "version": "1.0",
+  "truncation": null,
+  "padding": null,
+  "added_tokens": [
+    {
+      "id": 0,
+      "content": "<PAD>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 1,
+      "content": "<START>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 2,
+      "content": "<END>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 3,
+      "content": "<UNK>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 4,
+      "content": "<SEP>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    }
+  ],
+  "normalizer": null,
+  "pre_tokenizer": {
+    "type": "ByteLevel",
+    "add_prefix_space": false,
+    "trim_offsets": true,
+    "use_regex": true
+  },
+  "post_processor": {
+    "type": "TemplateProcessing",
+    "single": [
+      {
+        "SpecialToken": {
+          "id": "<START>",
+          "type_id": 0
+        }
+      },
+      {
+        "Sequence": {
+          "id": "A",
+          "type_id": 0
+        }
+      },
+      {
+        "SpecialToken": {
+          "id": "<END>",
+          "type_id": 0
+        }
+      }
+    ],
+    "pair": [
+      {
+        "SpecialToken": {
+          "id": "<START>",
+          "type_id": 0
+        }
+      },
+      {
+        "Sequence": {
+          "id": "A",
+          "type_id": 0
+        }
+      },
+      {
+        "SpecialToken": {
+          "id": "<SEP>",
+          "type_id": 0
+        }
+      },
+      {
+        "Sequence": {
+          "id": "B",
+          "type_id": 0
+        }
+      },
+      {
+        "SpecialToken": {
+          "id": "<END>",
+          "type_id": 0
+        }
+      }
+    ],
+    "special_tokens": {
+      "<END>": {
+        "id": "<END>",
+        "ids": [
+          2
+        ],
+        "tokens": [
+          "<END>"
+        ]
+      },
+      "<SEP>": {
+        "id": "<SEP>",
+        "ids": [
+          4
+        ],
+        "tokens": [
+          "<SEP>"
+        ]
+      },
+      "<START>": {
+        "id": "<START>",
+        "ids": [
+          1
+        ],
+        "tokens": [
+          "<START>"
+        ]
+      }
+    }
+  },
+  "decoder": {
+    "type": "ByteLevel",
+    "add_prefix_space": true,
+    "trim_offsets": true,
+    "use_regex": true
+  },
+  "model": {
+    "type": "BPE",
+    "dropout": null,
+    "unk_token": null,
+    "continuing_subword_prefix": null,
+    "end_of_word_suffix": null,
+    "fuse_unk": false,
+    "byte_fallback": false,
+    "ignore_merges": false,
+    "vocab": {
+      "<PAD>": 0,
+      "<START>": 1,
+      "<END>": 2,
+      "<UNK>": 3,
+      "<SEP>": 4,
+      "!": 5,
+      "?": 6,
+      "¢": 7,
+      "¥": 8,
+      "°": 9,
+      "µ": 10,
+      "º": 11,
+      "á": 12,
+      "Ġ": 13,
+      "Ĥ": 14,
+      "ħ": 15,
+      "Ī": 16,
+      "Ĭ": 17,
+      "ĭ": 18,
+      "į": 19,
+      "İ": 20,
+      "Ĳ": 21,
+      "ĵ": 22,
+      "ķ": 23,
+      "Ŀ": 24,
+      "ł": 25,
+      "áĬ": 26,
+      "áĪ": 27,
+      "áĭ": 28,
+      "áį": 29,
+      "ĠáĬ": 30,
+      "áĬ¥": 31,
+      "áĬķ": 32,
+      "áĭ°": 33,
+      "áį¢": 34,
+      "ĠáĪ": 35,
+      "Ĥáĭ": 36,
+      "ħáĬ": 37,
+      "Ĳáĭ": 38,
+      "ĿáĬķ": 39,
+      "łáĪ": 40,
+      "łáĭ": 41,
+      "áĬłáĭ": 42,
+      "áĪº": 43,
+      "áĪĤáĭ": 44,
+      "áĪħáĬ": 45,
+      "ĠáĬĲáĭ": 46,
+      "ĠáĬłáĪ": 47,
+      "áĬ¥áĬķ": 48,
+      "áĬ¥áĪº": 49,
+      "áĭ°áĪħáĬ": 50,
+      "ĠáĪĿáĬķ": 51,
+      "áĬłáĭİ": 52,
+      "áĪĤáĭµ": 53,
+      "ĠáĬĲáĭį": 54,
+      "ĠáĬłáĪĪ": 55,
+      "áĬ¥áĬķáĭ°": 56,
+      "áĭ°áĪħáĬĵ": 57
+    },
+    "merges": [
+      [
+        "á",
+        "Ĭ"
+      ],
+      [
+        "á",
+        "Ī"
+      ],
+      [
+        "á",
+        "ĭ"
+      ],
+      [
+        "á",
+        "į"
+      ],
+      [
+        "Ġ",
+        "áĬ"
+      ],
+      [
+        "áĬ",
+        "¥"
+      ],
+      [
+        "áĬ",
+        "ķ"
+      ],
+      [
+        "áĭ",
+        "°"
+      ],
+      [
+        "áį",
+        "¢"
+      ],
+      [
+        "Ġ",
+        "áĪ"
+      ],
+      [
+        "Ĥ",
+        "áĭ"
+      ],
+      [
+        "ħ",
+        "áĬ"
+      ],
+      [
+        "Ĳ",
+        "áĭ"
+      ],
+      [
+        "Ŀ",
+        "áĬķ"
+      ],
+      [
+        "ł",
+        "áĪ"
+      ],
+      [
+        "ł",
+        "áĭ"
+      ],
+      [
+        "áĬ",
+        "łáĭ"
+      ],
+      [
+        "áĪ",
+        "º"
+      ],
+      [
+        "áĪ",
+        "Ĥáĭ"
+      ],
+      [
+        "áĪ",
+        "ħáĬ"
+      ],
+      [
+        "ĠáĬ",
+        "Ĳáĭ"
+      ],
+      [
+        "ĠáĬ",
+        "łáĪ"
+      ],
+      [
+        "áĬ¥",
+        "áĬķ"
+      ],
+      [
+        "áĬ¥",
+        "áĪº"
+      ],
+      [
+        "áĭ°",
+        "áĪħáĬ"
+      ],
+      [
+        "ĠáĪ",
+        "ĿáĬķ"
+      ],
+      [
+        "áĬłáĭ",
+        "İ"
+      ],
+      [
+        "áĪĤáĭ",
+        "µ"
+      ],
+      [
+        "ĠáĬĲáĭ",
+        "į"
+      ],
+      [
+        "ĠáĬłáĪ",
+        "Ī"
+      ],
+      [
+        "áĬ¥áĬķ",
+        "áĭ°"
+      ],
+      [
+        "áĭ°áĪħáĬ",
+        "ĵ"
+      ]
+    ]
+  }
+}
